@@ -6,9 +6,10 @@ import { MapPin, SlidersHorizontal, Eye, Maximize2, Camera } from "lucide-react"
 
 interface GalleryProps {
   onSelectPhoto: (photoId: string) => void
+  onOpenImageGuide: () => void
 }
 
-export function Gallery({ onSelectPhoto }: GalleryProps) {
+export function Gallery({ onSelectPhoto, onOpenImageGuide }: GalleryProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
   const [layoutMode, setLayoutMode] = useState<"masonry" | "grid">("masonry")
 
@@ -68,8 +69,16 @@ export function Gallery({ onSelectPhoto }: GalleryProps) {
           {filteredPhotos.map((photo) => (
             <div
               key={photo.id}
+              role="button"
+              tabIndex={0}
               onClick={() => onSelectPhoto(photo.id)}
-              className="group relative cursor-pointer overflow-hidden rounded-sm bg-neutral-900 border border-border/40 transition-all duration-300 hover:shadow-xl"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault()
+                  onSelectPhoto(photo.id)
+                }
+              }}
+              className="group relative cursor-pointer overflow-hidden rounded-sm bg-neutral-900 border border-border/40 transition-all duration-300 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-foreground"
             >
               {/* Photo Image with Aspect Ratio */}
               <div
@@ -146,17 +155,12 @@ export function Gallery({ onSelectPhoto }: GalleryProps) {
               All photography shown above uses high-resolution Unsplash placeholders with tagged IDs (e.g. IMG_ARCH_01).
             </span>
           </div>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault()
-              const element = document.getElementById("image-guide-modal")
-              element?.classList.remove("hidden")
-            }}
-            className="underline hover:opacity-80 shrink-0"
+          <button
+            onClick={onOpenImageGuide}
+            className="underline hover:opacity-80 shrink-0 text-left cursor-pointer focus:outline-none"
           >
             View Replacement Manifest →
-          </a>
+          </button>
         </div>
       </div>
     </section>

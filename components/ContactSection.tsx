@@ -144,6 +144,7 @@ export function ContactSection({ initialSubject = "" }: ContactSectionProps) {
                   Thank you for reaching out. Julian Vane will review your commission request and reply to <strong className="text-foreground">{formData.email}</strong> within 24 hours.
                 </p>
                 <button
+                  type="button"
                   onClick={() => setSubmitted(false)}
                   className="mt-4 px-4 py-2 text-xs font-mono text-muted-foreground hover:text-foreground underline focus:outline-none"
                 >

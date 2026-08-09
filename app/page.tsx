@@ -34,7 +34,10 @@ export default function Home() {
           onOpenImageGuide={() => setImageGuideOpen(true)}
         />
 
-        <Gallery onSelectPhoto={(id) => setSelectedPhotoId(id)} />
+        <Gallery
+          onSelectPhoto={(id) => setSelectedPhotoId(id)}
+          onOpenImageGuide={() => setImageGuideOpen(true)}
+        />
 
         <IntroSection />
 

@@ -81,8 +81,16 @@ export function Hero({ onSelectPhoto, onOpenImageGuide }: HeroProps) {
             <div className="relative group">
               {/* Photo Frame Container */}
               <div
+                role="button"
+                tabIndex={0}
                 onClick={() => onSelectPhoto(featuredPhoto.id)}
-                className="cursor-pointer relative overflow-hidden rounded-sm bg-neutral-900 aspect-[3/4] border border-border/60 shadow-xl transition-transform duration-500 group-hover:scale-[1.01]"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault()
+                    onSelectPhoto(featuredPhoto.id)
+                  }
+                }}
+                className="cursor-pointer relative overflow-hidden rounded-sm bg-neutral-900 aspect-[3/4] border border-border/60 shadow-xl transition-transform duration-500 group-hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-foreground"
               >
                 <img
                   src={featuredPhoto.imageUrl}
