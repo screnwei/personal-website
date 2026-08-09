@@ -20,7 +20,7 @@ export function PricingSection({ onSelectPlan }: PricingSectionProps) {
             Transparent Investment & Licensing
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground font-sans font-light leading-relaxed">
-            All assignments are handled directly by Julian Vane with custom color grading, archival digital deliverables, and clear licensing terms tailored to your project goals.
+            All assignments are handled directly by Alex Morgan with custom color grading, archival digital deliverables, and clear licensing terms tailored to your project goals.
           </p>
         </div>
 
