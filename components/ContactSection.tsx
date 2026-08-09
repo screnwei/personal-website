@@ -141,7 +141,7 @@ export function ContactSection({ initialSubject = "" }: ContactSectionProps) {
                   Inquiry Received
                 </h3>
                 <p className="text-xs text-muted-foreground max-w-md mx-auto font-sans font-light leading-relaxed">
-                  Thank you for reaching out. Julian Vane will review your commission request and reply to <strong className="text-foreground">{formData.email}</strong> within 24 hours.
+                  Thank you for reaching out. Alex Morgan will review your commission request and reply to <strong className="text-foreground">{formData.email}</strong> within 24 hours.
                 </p>
                 <button
                   type="button"

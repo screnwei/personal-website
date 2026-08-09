@@ -33,10 +33,10 @@ export interface PricingPlan {
 }
 
 export const PHOTOGRAPHER_INFO = {
-  name: "Julian Vane",
+  name: "Alex Morgan",
   title: "Architectural & Environmental Photographer",
   location: "Tokyo • Paris",
-  email: "hello@julianvane.photo",
+  email: "hello@example.com",
   phone: "+33 (0)1 42 68 55 90",
   bio: "Specializing in spatial geometry, architectural documentation, and environmental portraiture. Over a decade of editorial and private commission work across East Asia and Western Europe.",
   philosophy: "Photography is the observation of light, silence, and structural harmony. My approach emphasizes understated balance, allowing spaces and subjects to speak without artificial distortion.",
@@ -45,9 +45,9 @@ export const PHOTOGRAPHER_INFO = {
     { city: "Tokyo", address: "Minami-Aoyama, Minato-ku, Tokyo, Japan" }
   ],
   socials: [
-    { name: "Instagram", url: "https://instagram.com", handle: "@julianvane.photo" },
-    { name: "Unsplash", url: "https://unsplash.com", handle: "@julianvane" },
-    { name: "Behance", url: "https://behance.net", handle: "julianvane" }
+    { name: "Instagram", url: "https://instagram.com", handle: "@alexmorgan.photo" },
+    { name: "Unsplash", url: "https://unsplash.com", handle: "@alexmorgan" },
+    { name: "Behance", url: "https://behance.net", handle: "alexmorgan" }
   ]
 };
 

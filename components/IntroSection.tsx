@@ -24,14 +24,14 @@ export function IntroSection() {
             <div className="relative rounded-sm overflow-hidden border border-border bg-neutral-900 aspect-[4/5] shadow-lg">
               <img
                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=85"
-                alt="Julian Vane"
+                alt="Alex Morgan"
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-amber-300 border border-amber-500/30">
                 Placeholder: IMG_BIO_PORTRAIT (1000x1250)
               </div>
               <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-mono">
-                <div className="font-serif text-lg text-white font-medium">Julian Vane</div>
+                <div className="font-serif text-lg text-white font-medium">Alex Morgan</div>
                 <div className="text-neutral-300">Paris & Tokyo Studios</div>
               </div>
             </div>
